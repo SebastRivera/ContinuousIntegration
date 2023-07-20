@@ -81,8 +81,8 @@ public class Meal {
   }
 
   public boolean validateQuantity(int quantity) {
-    if (quantity <= 0) {
-      System.out.println("The quantity should be more than zero");
+    if (quantity <= 0 || quantity>100) {
+      System.out.println("**The quantity should be more than 0 and less than 100");
       return false;
     }
     return true;
@@ -96,7 +96,7 @@ public class Meal {
 
   public boolean checkAvailability() {
     if (!this.availability) {
-      System.out.println("The selected meal is currently unavailable");
+      System.out.println("**The selected meal is currently unavailable");
       return false;
     }
     return true;
