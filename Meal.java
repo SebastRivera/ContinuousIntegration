@@ -1,4 +1,3 @@
-
 public class Meal {
   private int id;
   private String name;
@@ -7,7 +6,7 @@ public class Meal {
   private boolean chefSpecial;
   private boolean availability;
 
-  public Meal(int id, String name, float price, int quantity, boolean chefSpecial, boolean availability){
+  public Meal(int id, String name, float price, int quantity, boolean chefSpecial, boolean availability) {
     this.id = id;
     this.name = name;
     this.price = price;
@@ -16,13 +15,29 @@ public class Meal {
     this.availability = availability;
   }
 
-  public Meal(int id, String name, int quantity, boolean chefSpecial, boolean availability){
+  public Meal(int id, String name, boolean chefSpecial, boolean availability) {
     this.id = id;
     this.name = name;
     this.price = 5;
-    this.quantity = quantity;
+    this.quantity = 1;
     this.chefSpecial = chefSpecial;
     this.availability = availability;
+  }
+  public Meal(int id, String name, float price, boolean chefSpecial, boolean availability) {
+    this.id = id;
+    this.name = name;
+    this.price = price;
+    this.quantity = 1;
+    this.chefSpecial = chefSpecial;
+    this.availability = availability;
+  }
+
+  public int getId() {
+    return this.id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
   }
 
   public boolean getAvailability() {
