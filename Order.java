@@ -1,14 +1,21 @@
+import java.util.ArrayList; 
 
 public class Order {
-  private Meal[] meals;
+  private ArrayList<Meal> meals;
   private int quantity;
   private float totalCost;
 
-  public Meal[] getMeals() {
+  public Order(){
+    this.meals = new ArrayList<Meal>();
+    this.quantity = 0;
+    this.totalCost = 0;
+  }
+  
+  public ArrayList<Meal> getMeals() {
     return meals;
   }
 
-  public void setMeals(Meal[] meals) {
+  public void setMeals(ArrayList<Meal> meals) {
     this.meals = meals;
   }
 
@@ -50,7 +57,7 @@ public class Order {
 
   public boolean checkMaxQuantity() {
     if (this.quantity > 100) {
-      System.out.println("CAN NOT ORDER MORE THAN 100 MEALS");
+      System.out.println("**CAN NOT ORDER MORE THAN 100 MEALS");
       return false;
     }
     return true;
@@ -61,6 +68,14 @@ public class Order {
     for (Meal m : this.meals) {
       System.out.println(m.getName() + "    " + m.getQuantity() + "    " + "$" + m.getPrice() * m.getQuantity());
     }
+    System.out.println("TOTAL COST: $" + this.totalCost);
+  }
+
+  public void addMeal(Meal meal){
+    this.meals.add(meal);
+    this.totalCost+=(meal.getPrice()*meal.getQuantity());
+    this.quantity+=meal.getQuantity();
   }
 
 }
+
