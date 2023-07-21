@@ -1,3 +1,4 @@
+package com.g6.continuous_integration;
 import java.util.ArrayList; 
 
 public class Menu {

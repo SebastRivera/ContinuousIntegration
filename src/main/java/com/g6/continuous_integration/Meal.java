@@ -1,3 +1,4 @@
+package com.g6.continuous_integration;
 public class Meal {
   private int id;
   private String name;
