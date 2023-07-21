@@ -1,4 +1,5 @@
-import java.util.ArrayList; 
+import java.util.ArrayList;
+import java.util.Scanner; 
 
 public class Order {
   private ArrayList<Meal> meals;
@@ -77,5 +78,9 @@ public class Order {
     this.quantity+=meal.getQuantity();
   }
 
+  public void displayFinalOrder() {
+    System.out.println("FINAL ORDER:");
+    displayOrder();
+  }
 }
 
