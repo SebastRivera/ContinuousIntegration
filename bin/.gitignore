@@ -1,0 +1,20 @@
+# Maven target directory
+/target/
+
+# IDE-specific files
+.classpath
+.project
+.settings/
+.vscode/
+.idea/
+*.iml
+
+# Maven wrapper
+/.mvn/
+
+# System and temporary files
+*~
+.DS_Store
+
+# Log files
+/logs/
